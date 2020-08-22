@@ -1,0 +1,355 @@
+{
+  "properties": {
+    "lenses": {
+      "0": {
+        "order": 0,
+        "parts": {
+          "0": {
+            "position": {
+              "x": 0,
+              "y": 0,
+              "colSpan": 6,
+              "rowSpan": 4
+            },
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "ComponentId",
+                  "value": {
+                    "SubscriptionId": "146aa6f8-2d3e-4da8-927c-9f53583f6556",
+                    "ResourceGroup": "rgappservice",
+                    "Name": "appservicedemoanish",
+                    "ResourceId": "/subscriptions/146aa6f8-2d3e-4da8-927c-9f53583f6556/resourceGroups/rgappservice/providers/microsoft.insights/components/appservicedemoanish"
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "Dimensions",
+                  "value": {
+                    "xAxis": {
+                      "name": "timestamp",
+                      "type": "datetime"
+                    },
+                    "yAxis": [
+                      {
+                        "name": "duration",
+                        "type": "real"
+                      }
+                    ],
+                    "splitBy": [
+                      {
+                        "name": "id",
+                        "type": "string"
+                      }
+                    ],
+                    "aggregation": "Sum"
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "Query",
+                  "value": "requests\n",
+                  "isOptional": true
+                },
+                {
+                  "name": "PartTitle",
+                  "value": "Analytics",
+                  "isOptional": true
+                },
+                {
+                  "name": "PartSubTitle",
+                  "value": "appservicedemoanish",
+                  "isOptional": true
+                },
+                {
+                  "name": "PartId",
+                  "value": "99359eb5-c8e7-4302-969e-4bb0313b0b71",
+                  "isOptional": true
+                },
+                {
+                  "name": "Version",
+                  "value": "1.0",
+                  "isOptional": true
+                },
+                {
+                  "name": "resourceTypeMode",
+                  "value": "components",
+                  "isOptional": true
+                },
+                {
+                  "name": "TimeRange",
+                  "value": "P1D",
+                  "isOptional": true
+                },
+                {
+                  "name": "DashboardId",
+                  "isOptional": true
+                },
+                {
+                  "name": "ControlType",
+                  "value": "AnalyticsChart",
+                  "isOptional": true
+                },
+                {
+                  "name": "SpecificChart",
+                  "value": "Bar",
+                  "isOptional": true
+                }
+              ],
+              "type": "Extension/AppInsightsExtension/PartType/AnalyticsPart",
+              "settings": {}
+            }
+          },
+          "1": {
+            "position": {
+              "x": 7,
+              "y": 0,
+              "colSpan": 6,
+              "rowSpan": 4
+            },
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "ComponentId",
+                  "value": {
+                    "SubscriptionId": "146aa6f8-2d3e-4da8-927c-9f53583f6556",
+                    "ResourceGroup": "rgappservice",
+                    "Name": "appservicedemoanish",
+                    "ResourceId": "/subscriptions/146aa6f8-2d3e-4da8-927c-9f53583f6556/resourceGroups/rgappservice/providers/microsoft.insights/components/appservicedemoanish"
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "Dimensions",
+                  "value": {
+                    "xAxis": {
+                      "name": "timestamp",
+                      "type": "datetime"
+                    },
+                    "yAxis": [
+                      {
+                        "name": "totalCount",
+                        "type": "long"
+                      }
+                    ],
+                    "splitBy": [],
+                    "aggregation": "Sum"
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "Query",
+                  "value": "// Request count trend \n// Chart Request count over the last day. \nrequests\n| summarize totalCount=sum(itemCount) by bin(timestamp, 30m)\n| render timechart",
+                  "isOptional": true
+                },
+                {
+                  "name": "PartTitle",
+                  "value": "Analytics",
+                  "isOptional": true
+                },
+                {
+                  "name": "PartSubTitle",
+                  "value": "appservicedemoanish",
+                  "isOptional": true
+                },
+                {
+                  "name": "PartId",
+                  "value": "548bdac2-93ea-4cc7-9156-343c7e34c0b8",
+                  "isOptional": true
+                },
+                {
+                  "name": "Version",
+                  "value": "1.0",
+                  "isOptional": true
+                },
+                {
+                  "name": "resourceTypeMode",
+                  "value": "components",
+                  "isOptional": true
+                },
+                {
+                  "name": "TimeRange",
+                  "value": "P1D",
+                  "isOptional": true
+                },
+                {
+                  "name": "DashboardId",
+                  "isOptional": true
+                },
+                {
+                  "name": "ControlType",
+                  "value": "AnalyticsChart",
+                  "isOptional": true
+                },
+                {
+                  "name": "SpecificChart",
+                  "value": "Line",
+                  "isOptional": true
+                }
+              ],
+              "type": "Extension/AppInsightsExtension/PartType/AnalyticsPart",
+              "settings": {}
+            }
+          },
+          "2": {
+            "position": {
+              "x": 0,
+              "y": 8,
+              "colSpan": 6,
+              "rowSpan": 4
+            },
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "options",
+                  "value": {
+                    "chart": {
+                      "metrics": [
+                        {
+                          "resourceMetadata": {
+                            "id": "/subscriptions/146aa6f8-2d3e-4da8-927c-9f53583f6556/resourcegroups/rgappservice/providers/Microsoft.Web/sites/appservicedemoanish"
+                          },
+                          "name": "HealthCheckStatus",
+                          "aggregationType": 4,
+                          "namespace": "microsoft.web/sites",
+                          "metricVisualization": {
+                            "displayName": "Health check status"
+                          }
+                        }
+                      ],
+                      "titleKind": 0,
+                      "visualization": {
+                        "chartType": 2,
+                        "legendVisualization": {
+                          "isVisible": true,
+                          "position": 2,
+                          "hideSubtitle": false
+                        },
+                        "axisVisualization": {
+                          "x": {
+                            "isVisible": true,
+                            "axisType": 2
+                          },
+                          "y": {
+                            "isVisible": true,
+                            "axisType": 1
+                          }
+                        }
+                      },
+                      "timespan": {
+                        "relative": {
+                          "duration": 86400000
+                        },
+                        "showUTCTime": false,
+                        "grain": 1
+                      }
+                    }
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "sharedTimeRange",
+                  "isOptional": true
+                }
+              ],
+              "type": "Extension/HubsExtension/PartType/MonitorChartPart",
+              "settings": {
+                "content": {
+                  "options": {
+                    "chart": {
+                      "metrics": [
+                        {
+                          "resourceMetadata": {
+                            "id": "/subscriptions/146aa6f8-2d3e-4da8-927c-9f53583f6556/resourcegroups/rgappservice/providers/Microsoft.Web/sites/appservicedemoanish"
+                          },
+                          "name": "HealthCheckStatus",
+                          "aggregationType": 4,
+                          "namespace": "microsoft.web/sites",
+                          "metricVisualization": {
+                            "displayName": "Health check status"
+                          }
+                        }
+                      ],
+                      "titleKind": 0,
+                      "visualization": {
+                        "chartType": 2,
+                        "legendVisualization": {
+                          "isVisible": true,
+                          "position": 2,
+                          "hideSubtitle": false
+                        },
+                        "axisVisualization": {
+                          "x": {
+                            "isVisible": true,
+                            "axisType": 2
+                          },
+                          "y": {
+                            "isVisible": true,
+                            "axisType": 1
+                          }
+                        },
+                        "disablePinning": true
+                      }
+                    }
+                  }
+                }
+              },
+              "filters": {
+                "MsPortalFx_TimeRange": {
+                  "model": {
+                    "format": "local",
+                    "granularity": "auto",
+                    "relative": "1440m"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "metadata": {
+      "model": {
+        "timeRange": {
+          "value": {
+            "relative": {
+              "duration": 24,
+              "timeUnit": 1
+            }
+          },
+          "type": "MsPortalFx.Composition.Configuration.ValueTypes.TimeRange"
+        },
+        "filterLocale": {
+          "value": "en-us"
+        },
+        "filters": {
+          "value": {
+            "MsPortalFx_TimeRange": {
+              "model": {
+                "format": "utc",
+                "granularity": "auto",
+                "relative": "24h"
+              },
+              "displayCache": {
+                "name": "UTC Time",
+                "value": "Past 24 hours"
+              },
+              "filteredPartIds": [
+                "StartboardPart-AnalyticsPart-ef842f59-d1ea-40e0-9fc1-20a0440d110a",
+                "StartboardPart-AnalyticsPart-ef842f59-d1ea-40e0-9fc1-20a0440d110c",
+                "StartboardPart-MonitorChartPart-ef842f59-d1ea-40e0-9fc1-20a0440d110e"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "name": "anishAppserviceDemoDashboard",
+  "type": "Microsoft.Portal/dashboards",
+  "location": "INSERT LOCATION",
+  "tags": {
+    "hidden-title": "anishAppserviceDemoDashboard"
+  },
+  "apiVersion": "2015-08-01-preview"
+}
